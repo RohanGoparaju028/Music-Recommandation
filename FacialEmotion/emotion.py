@@ -30,7 +30,7 @@ def read_image():
 def detectEmotion(face_image):
     analysis = DeepFace.analyze(face_image,actions=['emotion'],enforce_detection=False)
     return analysis[0]['dominant_emotion']
-app = FastApi()
+app = FastAPI()
 class EmotionalRespone(BaseModel):
     status:str
     dominantEmotion:str
