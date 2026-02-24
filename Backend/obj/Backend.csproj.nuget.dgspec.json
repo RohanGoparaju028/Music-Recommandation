@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[10.0.3, )"
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[7.4.0, )"
             }
           },
           "imports": [

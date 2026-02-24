@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "u1t/vm6WG1E=",
+  "dgSpecHash": "gSyG6robgos=",
   "success": true,
   "projectFilePath": "C:\\Users\\w533rxg\\Downloads\\MusicRecommandation\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\w533rxg\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
-    "C:\\Users\\w533rxg\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "C:\\Users\\w533rxg\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\w533rxg\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\w533rxg\\.nuget\\packages\\spotifyapi.web\\7.4.0\\spotifyapi.web.7.4.0.nupkg.sha512"
   ],
   "logs": []
 }

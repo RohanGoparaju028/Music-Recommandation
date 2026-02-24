@@ -36,6 +36,35 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SpotifyAPI.Web/7.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/net8.0/SpotifyAPI.Web.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SpotifyAPI.Web.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -75,11 +104,65 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "SpotifyAPI.Web/7.4.0": {
+      "sha512": "1xewe5k+dy3cQJ9iIOmw4CUmBUnVZflSjcFL33636h/XuTLUnBKkKiB9dCeHJeVVtN0+on+t2Wy3haJBJMp3Vg==",
+      "type": "package",
+      "path": "spotifyapi.web/7.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/SpotifyAPI.Web.dll",
+        "lib/net5.0/SpotifyAPI.Web.xml",
+        "lib/net6.0/SpotifyAPI.Web.dll",
+        "lib/net6.0/SpotifyAPI.Web.xml",
+        "lib/net7.0/SpotifyAPI.Web.dll",
+        "lib/net7.0/SpotifyAPI.Web.xml",
+        "lib/net8.0/SpotifyAPI.Web.dll",
+        "lib/net8.0/SpotifyAPI.Web.xml",
+        "lib/netstandard2.0/SpotifyAPI.Web.dll",
+        "lib/netstandard2.0/SpotifyAPI.Web.xml",
+        "lib/netstandard2.1/SpotifyAPI.Web.dll",
+        "lib/netstandard2.1/SpotifyAPI.Web.xml",
+        "spotifyapi.web.7.4.0.nupkg.sha512",
+        "spotifyapi.web.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.3"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.3",
+      "SpotifyAPI.Web >= 7.4.0"
     ]
   },
   "packageFolders": {
@@ -128,6 +211,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.3, )"
+          },
+          "SpotifyAPI.Web": {
+            "target": "Package",
+            "version": "[7.4.0, )"
           }
         },
         "imports": [
