@@ -1,0 +1,13 @@
+# Web Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+
+# Emotion Recognition AI (Letting pip find compatible versions)
+deepface
+tf-keras
+tensorflow
+
+# Image Processing
+opencv-python-headless
+numpy
+python-multipart
