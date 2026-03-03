@@ -4,9 +4,8 @@ using System.Threading.Tasks;
 namespace Backend.Services
 {
     public class SpotifyService
-    {
-        private readonly string _clientId = "4dbf83235bae44818ae84d4103d17cbc"; 
-        private readonly string _clientSecret = "9f1a6385386c4338b184aaf467618684"; 
+    {qprivate readonly string _clientId = "";
+        private readonly string _clientSecret = "";
         private static readonly Random _random = new Random();  
 
        public async Task<string?> GetSpotifyTrackUrl(string emotion)
