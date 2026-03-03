@@ -1,0 +1,33 @@
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #121212; /* Dark theme */
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vibe-button {
+  background-color: #1DB954; /* Spotify Green */
+  color: white;
+  padding: 18px 36px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.vibe-button:hover {
+  transform: scale(1.05);
+  background-color: #1ed760;
+}
+
+.vibe-button:disabled {
+  background-color: #535353;
+  cursor: not-allowed;
+}

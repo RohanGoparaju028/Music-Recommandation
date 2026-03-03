@@ -21,18 +21,19 @@ public class MusicController : ControllerBase
     [HttpGet("play")]
     public async Task<IActionResult> PlayMusic()
     {
-    var emotion = await _emotionService.GetEmotion();
-
-    if (emotion == "Cannot access the server")
-        return BadRequest("Emotion service unavailable");
-    var trackUrl = await _spotifyService.GetSpotifyTrackUrl(emotion);
-
-    if (string.IsNullOrEmpty(trackUrl))
-    {
-        return NotFound("No tracks found for this emotion.");
+        var emotion = await _emotionService.GetEmotion();
+        if (emotion == "Cannot access the server")
+        {
+            return BadRequest(new { error = "Emotion service unavailable" });
+        }
+        var trackUrl = await _spotifyService.GetSpotifyTrackUrl(emotion);
+        if (string.IsNullOrEmpty(trackUrl))
+        {
+            return NotFound(new { error = "No tracks found" });
+        }
+        return Ok(new { 
+            detectedEmotion = emotion, 
+            spotifyLink = trackUrl 
+        });
+        }
     }
-
-    // This command tells the browser to go to the Spotify page immediately
-    return Redirect(trackUrl);
-}
-}
