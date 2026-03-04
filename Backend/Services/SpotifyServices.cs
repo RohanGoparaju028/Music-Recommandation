@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 namespace Backend.Services
 {
     public class SpotifyService
-    {qprivate readonly string _clientId = "";
+    {
+        private readonly string _clientId = "";
         private readonly string _clientSecret = "";
         private static readonly Random _random = new Random();  
 

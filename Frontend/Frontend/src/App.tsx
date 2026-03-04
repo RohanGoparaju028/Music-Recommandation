@@ -4,25 +4,32 @@ import { useState } from 'react'
 function App() {
   const [loading, setLoading] = useState(false);
 
-  const startAnalysis = async () => {
+  // Inside App.tsx
+const startAnalysis = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5193/music/play');
-      const data = await response.json();
-      
-      if (data.spotifyLink) {
-        window.open(data.spotifyLink, '_blank');
-      }
+        const response = await fetch('http://localhost:5193/music/play');
+        const data = await response.json();
+        
+        if (data.spotifyLink) {
+            // This will navigate the current tab to the Spotify track
+            window.location.href = data.spotifyLink;
+        } else {
+            console.error("No link found in response:", data);
+            alert("Analysis finished, but no music was found.");
+        }
     } catch (err) {
-      console.error("Connection failed", err);
+        console.error("Connection failed", err);
+        alert("Check if your Backend is running on port 5193!");
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  }
+}
+
 
   return (
     <div className="app-container">
-      <h1>Mood-to-Music AI</h1>
+      <h1> Music Recommandation based on Facial Emotion</h1>
       <p>Analyze your face, get the perfect track.</p>
       
       <button className="vibe-button" onClick={startAnalysis} disabled={loading}>
