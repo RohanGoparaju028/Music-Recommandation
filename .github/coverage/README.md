@@ -4,7 +4,7 @@ Run on 2026-09-28 with Python 3.12.13, seed 42, and the committed dependency loc
 
 | Check | Result |
 | --- | --- |
-| Python tests | 15 passed; 96.90% statement coverage |
+| Python tests | 17 passed; 96.90% statement coverage |
 | Ruff lint and formatting | Passed |
 | Data validation | 60 tracks; 14,400 interactions |
 | Held-out model NDCG@10 | 0.907143 |
@@ -24,5 +24,5 @@ artifact corruption rejection, failed-quality-gate preservation, concurrent infe
 readiness, request validation, and drift detection.
 
 Python 3.11/3.13, Docker image startup and CodeQL are configured in CI but were not executed locally.
-Docker's client was present but its daemon was stopped. GitHub workflows have not been run remotely.
+Docker's client was present but its daemon was stopped. GitHub workflows run on pushes; see the repository Actions tab for current results.
 The installed Starlette release emits a non-failing deprecation warning for its HTTPX-based test client.

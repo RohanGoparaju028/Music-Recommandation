@@ -28,10 +28,12 @@ jobs:
         if: always()
         run: |
           if [ -f artifacts/metrics.json ]; then
-            echo '### Held-out model evaluation (synthetic data)' >> "$GITHUB_STEP_SUMMARY"
-            echo '```json' >> "$GITHUB_STEP_SUMMARY"
-            cat artifacts/metrics.json >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            {
+              echo '### Held-out model evaluation (synthetic data)'
+              echo '```json'
+              cat artifacts/metrics.json
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()

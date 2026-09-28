@@ -5,6 +5,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+from http.client import RemoteDisconnected
 
 base = os.getenv("API_URL", "http://localhost:8000")
 for _attempt in range(30):
@@ -12,7 +13,7 @@ for _attempt in range(30):
         with urllib.request.urlopen(f"{base}/ready", timeout=2) as response:
             assert json.load(response)["status"] == "ready"
         break
-    except (urllib.error.URLError, TimeoutError):
+    except (urllib.error.URLError, TimeoutError, ConnectionError, RemoteDisconnected):
         time.sleep(1)
 else:
     raise SystemExit("API failed readiness smoke test")
